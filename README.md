@@ -2,8 +2,10 @@
 
 Static landing page for [Steward](https://steward.inbrief.sh), published with GitHub Pages.
 
-- `index.html`: the whole page, with inline CSS and no build step.
-- `icon.svg`: the Steward app icon, copied from the desktop app's Tauri icons.
+- `index.html`: the whole page, with inline CSS and no build step. Colors and type tokens are copied from the Steward desktop app (dark theme).
+- `assets/*.webp`: full-screen app screens (Code task waiting for approval, changes and delivery, Memory, Settings → Engines), rendered at 2x from the Steward redesign mockup. Refresh them when the app UI changes.
+- `assets/fonts/`: self-hosted IBM Plex Sans and IBM Plex Mono (SIL Open Font License, see `LICENSE-IBM-Plex.txt`), the same fonts the app ships.
+- `assets/og.png`, `favicon.png`, `apple-touch-icon.png`: social card and icons.
 - `CNAME`: the custom domain GitHub Pages serves.
 
 ## Preview
