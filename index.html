@@ -134,7 +134,10 @@
     code { padding: 1px 6px; border: 1px solid var(--border); border-radius: 5px; background: var(--sidebar); font: 500 .85em var(--mono); }
 
     footer { padding: 32px 0 48px; border-top: 1px solid var(--divider); color: var(--muted); font-size: .875rem; }
-    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+    /* Left-aligned: the status widget floats over the bottom-right corner. */
+    footer .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+    footer .status-badge { display: block; line-height: 0; }
+    footer .status-badge img { display: block; max-width: 100%; height: auto; }
 
     @media (max-width: 1000px) {
       .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -151,6 +154,8 @@
       /* Keep screens legible on phones: pan inside the frame instead of shrinking. */
       .shot img { min-width: 760px; }
       .btn { flex: 1 1 100%; }
+      /* Leave room for the full-width status widget docked at the bottom. */
+      footer { padding-bottom: 184px; }
     }
   </style>
 </head>
@@ -379,6 +384,7 @@
     <div class="wrap">
       <span>Steward 0.1.0 · pre-release</span>
       <span>steward.inbrief.sh</span>
+      <a class="status-badge" href="https://demo.inbrief.sh/"><img src="https://demo.inbrief.sh/embed/v1/installations/emb_itf61d633s9a9qnwwr1rj/badge.svg" alt="Live service status" width="284" height="72" loading="lazy" /></a>
     </div>
   </footer>
 
