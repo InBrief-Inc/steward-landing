@@ -20,12 +20,12 @@ Then open http://localhost:8000.
 
 GitHub Pages publishes `main` at the repository root, so a push to `main` rebuilds the site.
 
-Settings → Pages: source "Deploy from a branch", branch `main`, folder `/ (root)`, custom domain `steward.inbrief.sh`. Turn on "Enforce HTTPS" once the certificate is issued.
+Settings → Pages: source "Deploy from a branch", branch `main`, folder `/ (root)`, custom domain `steward.inbrief.sh`. Leave "Enforce HTTPS" off, see below.
 
 DNS, in Cloudflare for the `inbrief.sh` zone:
 
 | Type  | Name    | Target                | Proxy status |
 | ----- | ------- | --------------------- | ------------ |
-| CNAME | steward | inbrief-inc.github.io | DNS only     |
+| CNAME | steward | inbrief-inc.github.io | Proxied      |
 
-Keep the record on "DNS only" (grey cloud). GitHub has to reach its own servers directly to issue the HTTPS certificate.
+Keep the record on "Proxied" (orange cloud), like `blog.inbrief.sh`. Cloudflare serves the HTTPS certificate (the zone's Universal SSL) and redirects HTTP to HTTPS, so GitHub's own certificate is not needed. On "DNS only", GitHub has to issue the certificate itself, which stayed pending for over an hour.
