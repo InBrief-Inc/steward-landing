@@ -239,6 +239,12 @@
           </div>
           <div class="copy">
             <p>Choose what Steward should do, separately from which model does it. Discuss, Plan and Review keep your source read-only.</p>
+            <ul class="ticks">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Type @ to point Discuss, Plan or Review at files in your checkout or at earlier tasks in the project.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Paste or drop up to four screenshots into Discuss, Plan or Review, for OpenRouter vision models and Anthropic or OpenAI keys.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Search finds tasks by what was said in them, in this project or across all projects.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Export any task as one Markdown file with its messages, diff, check receipts and cost. Credentials are redacted.</li>
+            </ul>
           </div>
         </div>
         <ul class="grid four">
@@ -291,7 +297,7 @@
           <li class="card warn">
             <span class="chip"><svg class="ic" aria-hidden="true"><use href="#i-shield-alert"/></svg></span>
             <h3>Full access</h3>
-            <p>Files and shell commands across this computer, with your user permissions. Applies to Code tasks and resets when you quit Steward.</p>
+            <p>Files and shell commands across this computer, with your user permissions. Applies to Code tasks and resets when you quit Steward. In a Git checkout, each run can be restored.</p>
           </li>
         </ul>
         <p class="note">In every mode, suggested memories still need your review.</p>
@@ -310,7 +316,7 @@
             <ul class="ticks">
               <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Checks run only after you approve the exact command, with network, child processes and repository writes denied.</li>
               <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>An independent model reviews the changes before the task completes.</li>
-              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Restoring compares with the files saved before the task edited them, and refuses files you changed afterwards.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Restoring compares with the files saved before the task edited them and skips files you changed afterwards. In a Git checkout, Full access runs keep restore points that cover shell-command changes too.</li>
               <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Project files shows the attached folder as a browsable tree, with Open for each file and Reveal in Finder for the folder. Files a Full access task wrote are one click away on its Changes tab.</li>
             </ul>
           </div>
@@ -386,9 +392,11 @@
           <div class="copy">
             <p>Connect an OpenRouter, Anthropic or OpenAI API key, or use your installed Codex or Claude Code CLI with its existing sign-in. Keys stay in your system's credential store.</p>
             <ul class="ticks">
-              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Choose fast and best models, then set a budget per task and a rolling 30-day limit.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Pick fast and best OpenRouter models from a searchable catalog that flags models routing would reject, then set a budget per task and a rolling 30-day limit.</li>
               <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Each task reserves its budget up front, and new OpenRouter tasks pause when the window is nearly full.</li>
               <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Subscription and Anthropic or OpenAI key usage, and optional Tavily web search, are reported separately, never counted as dollars.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>A model that repeats the same action with the same result is told so, then stopped, instead of spending its turns.</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Works behind corporate proxies and HTTPS inspection: requests trust your system's certificates and follow its proxy settings.</li>
             </ul>
           </div>
         </div>
