@@ -514,7 +514,7 @@
       const status = document.querySelector("#download-status");
       const links = [...document.querySelectorAll("[data-asset-suffix]")];
       const endpoint = "https://api.github.com/repos/InBrief-Inc/steward-releases/releases?per_page=20";
-      const versionPattern = /^\\d+\\.\\d+\\.\\d+(?:[-+][0-9A-Za-z.-]+)?$/;
+      const versionPattern = /^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/;
       fetch(endpoint, { headers: { Accept: "application/vnd.github+json" } })
         .then((response) => {
           if (!response.ok) throw new Error("Release lookup failed.");
