@@ -92,7 +92,8 @@
     h1 span { display: block; }
     h1 .amber { color: var(--amber-text); }
     .lead { max-width: 40rem; margin: 0 auto 32px; color: var(--secondary); font-size: clamp(1.05rem, 2vw, 1.25rem); }
-    .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 0 0 clamp(40px, 6vw, 64px); }
+    .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 0 0 12px; }
+    .download-note { margin: 0 auto clamp(40px, 6vw, 64px); color: var(--muted); font-size: .85rem; }
 
     /* Screens: the real app windows, never cropped */
     .shot { margin: 0; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); box-shadow: 0 32px 80px #000a; overflow-x: auto; text-align: left; }
@@ -217,9 +218,11 @@
       </h1>
       <p class="lead">Steward is a local-first desktop app for software engineering. Discuss, plan, code and review with your own AI engines, while your projects, memory and keys stay on your machine.</p>
       <div class="cta">
-        <a class="btn primary" href="#tasks">See how it works</a>
+        <a class="btn primary" href="https://github.com/InBrief-Inc/steward-releases/releases" target="_blank" rel="noopener">Download Steward</a>
+        <a class="btn" href="#tasks">See how it works</a>
         <a class="btn" href="#status">Project status</a>
       </div>
+      <p class="download-note">Signed installers have not been published yet. Verified downloads will appear on the releases page.</p>
       <figure class="shot">
         <img src="assets/code-approval.webp" width="2880" height="1800" fetchpriority="high" decoding="async" alt="Steward showing a Code task waiting for approval. The plan has three steps done and one waiting. A card shows the exact command, node tests/login.test.mjs, its folder, a 60 second limit and denied network access, with Approve and run check and Reject and stop task buttons. A side panel shows spending against the task budget.">
       </figure>
